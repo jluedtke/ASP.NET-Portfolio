@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="~/js/scripts.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/minified-tuxedo.css" />
+    <script src="~/js/tuxedo.js"></script>
+
+    <link rel="stylesheet" href="~/css/styles.css" />
+
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <nav class="nav-dark">
+        <header>
+            <a class="navbar-brand" href="/">Mr. Fix-It</a>
+        </header>
+        <ul class="menu-items">
+            <li class="f-col-1 flex-center">
+                @Html.ActionLink("About", "Index", "About")
+            </li>
+            <li class="f-col-1 flex-center">
+                @Html.ActionLink("Hire Us", "Index", "Jobs")
+            </li>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <li class="f-col-1 flex-center">
+                    @Html.ActionLink("Worker Dashboard", "Index", "Workers")
+                </li>
+            }
+            @if (User.Identity.IsAuthenticated)
+            {
+                <li class="f-col-1 flex-center">
+                    @Html.ActionLink("Log Out", "LogOff", "Account")
+                </li>
+            }
+        </ul>
+        <ul class="mobile-nav flex-center">
+            <div class="hamburger"></div>
+        </ul>
+        <div class="flyout">
+            <div class="bar">
+                <header class="text-light f-col-4">
+                    <a class="navbar-brand" href="/">Mr. Fix-It</a>
+                </header>
+                <div class="close f-col-1"></div>
+            </div>
+            <ul class="flyout-menu">
+                <li>
+                    @Html.ActionLink("About", "Index", "About")
+                </li>
+                <li>
+                    @Html.ActionLink("Hire Us", "Index", "Jobs")
+                </li>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li>
+                        @Html.ActionLink("Worker Dashboard", "Index", "Workers")
+                    </li>
+                }
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li>
+                        @Html.ActionLink("Log Out", "LogOff", "Account")
+                    </li>
+                }
+            </ul>
+        </div>
+    </nav>
+
+    <br /><br />
+
+    <div class="container main-container">
+        @RenderBody()
+    </div>
+</body>
+</html>
