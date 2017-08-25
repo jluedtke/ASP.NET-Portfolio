@@ -15,6 +15,7 @@ namespace Portfolio.Models
         public string description { get; set; }
         public string language { get; set; }
         public string html_url { get; set; }
+        public string homepage { get; set; }
 
 
         public static List<Repository> GetRepositories(int number)
