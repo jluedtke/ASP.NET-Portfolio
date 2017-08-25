@@ -19,27 +19,15 @@
 <body>
     <nav class="nav-dark">
         <header>
-            <a class="navbar-brand" href="/">Mr. Fix-It</a>
+            <a class="navbar-brand" href="/">Home</a>
         </header>
         <ul class="menu-items">
             <li class="f-col-1 flex-center">
-                @Html.ActionLink("About", "Index", "About")
+                @Html.ActionLink("About", "About", "Home")
             </li>
             <li class="f-col-1 flex-center">
-                @Html.ActionLink("Hire Us", "Index", "Jobs")
+                @Html.ActionLink("View Repositories", "StarredRepos", "Repository")
             </li>
-            @if (User.Identity.IsAuthenticated)
-            {
-                <li class="f-col-1 flex-center">
-                    @Html.ActionLink("Worker Dashboard", "Index", "Workers")
-                </li>
-            }
-            @if (User.Identity.IsAuthenticated)
-            {
-                <li class="f-col-1 flex-center">
-                    @Html.ActionLink("Log Out", "LogOff", "Account")
-                </li>
-            }
         </ul>
         <ul class="mobile-nav flex-center">
             <div class="hamburger"></div>
@@ -53,31 +41,17 @@
             </div>
             <ul class="flyout-menu">
                 <li>
-                    @Html.ActionLink("About", "Index", "About")
+                    @Html.ActionLink("About", "About", "Home")
                 </li>
                 <li>
-                    @Html.ActionLink("Hire Us", "Index", "Jobs")
+                    @Html.ActionLink("View Repositories", "StarredRepos", "Repository")
                 </li>
-                @if (User.Identity.IsAuthenticated)
-                {
-                    <li>
-                        @Html.ActionLink("Worker Dashboard", "Index", "Workers")
-                    </li>
-                }
-                @if (User.Identity.IsAuthenticated)
-                {
-                    <li>
-                        @Html.ActionLink("Log Out", "LogOff", "Account")
-                    </li>
-                }
             </ul>
         </div>
     </nav>
 
     <br /><br />
 
-    <div class="container main-container">
         @RenderBody()
-    </div>
 </body>
 </html>

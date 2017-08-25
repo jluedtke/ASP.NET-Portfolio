@@ -2,8 +2,24 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Awesome Mediocre Portfolio!</h2>
-<hr />
-@Html.ActionLink("About Me", "About")
-<br />
-@Html.ActionLink("View Repos", "StarredRepos", "Repository")
+<div class="hero-slideshow">
+    <div class="images">
+        <img class="1 active" src="~/img/GameDevelopment.jpg" alt="Forest">
+        <img class="2" src="~/img/web.png" alt="Girl">
+        <img class="3" src="~/img/mtg-wallpaper-hd-1920x1080.jpg" alt="darkened palms">
+        <img class="4" src="~/img/Dwane2.jpg" alt="Hills">
+    </div>
+    <div class="right-arrow"></div>
+    <div class="left-arrow"></div>
+    <div class="hero-text text-center bg-t-dark">
+        <h2 class="text-light">Jared Luedtke</h2>
+        <h6 class="text-light">Game Developer. Web Developer. Card Collector. Dwayne Enthusiast.</h6>
+        <div class="circles">
+            <div class="circle 1 active"></div>
+            <div class="circle 2"></div>
+            <div class="circle 3"></div>
+            <div class="circle 4"></div>
+        </div>
+        <br />
+    </div>
+</div>

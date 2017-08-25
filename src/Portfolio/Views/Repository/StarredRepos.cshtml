@@ -1,5 +1,9 @@
 ﻿@model IEnumerable<Portfolio.Models.Repository>
 
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
 <h2>Starred Repositories!</h2>
 
 @foreach( var pr in Model)
@@ -8,5 +12,6 @@
     <h4>@pr.description</h4>
     <h4>@pr.html_url</h4>
     <h4>@pr.language</h4>
+    <hr />
 
 }
