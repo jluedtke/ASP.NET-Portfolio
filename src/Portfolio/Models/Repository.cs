@@ -10,7 +10,13 @@ namespace Portfolio.Models
 {
     public class Repository
     {
-        
+
+        public string name { get; set; }
+        public string description { get; set; }
+        public string language { get; set; }
+        public string html_url { get; set; }
+
+
         public static List<Repository> GetRepositories(int number)
         {
             var client = new RestClient("https://api.github.com/");
@@ -22,7 +28,7 @@ namespace Portfolio.Models
                 response = await GetResponseContentAsync(client, request) as RestResponse;
             }).Wait();
             JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(response.Content);
-            List<Repository> repos = JsonConvert.DeserializeObject<List<Repository>>(jsonResponse["messages"].ToString());
+            List<Repository> repos = JsonConvert.DeserializeObject<List<Repository>>(jsonResponse["items"].ToString());
             return repos;
         }
 
