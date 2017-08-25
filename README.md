@@ -2,7 +2,7 @@
 ### Jared Luedtke 08.25.2017
 
 ## Description
-A repair technician job service.
+A portfolio made by me for me.
 
 ## Setup/Installation Requirements
 1. Clone this repository : [GitHub](https://github.com/jluedtke/ASP.NET-Portfolio)
