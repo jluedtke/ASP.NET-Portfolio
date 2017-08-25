@@ -24,3 +24,12 @@ h6.text-light {
     min-height: 100%;
     background-color: white;
 }
+
+.form-divide-light { 
+    margin: 0px;
+    margin-bottom: 4px;
+}
+
+.italy {
+    font-style: italic;
+}
