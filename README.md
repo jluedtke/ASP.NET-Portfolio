@@ -1,8 +1,8 @@
-# ASP.NEt Portfolio
+# ASP.NET Portfolio
 ### Jared Luedtke 08.25.2017
 
 ## Description
-A portfolio made by me for me.
+A portfolio made by me for everyone.
 
 ## Setup/Installation Requirements
 1. Clone this repository : [GitHub](https://github.com/jluedtke/ASP.NET-Portfolio)
